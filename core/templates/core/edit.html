@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Novo Post</title>
+</head>
+<body>
+	<h1>Edit Post</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		{{form}}
+		<button type="submit">Update</button>
+	</form>
+
+</body>
+</html>

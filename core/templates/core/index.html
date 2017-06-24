@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Django Simple Blog</title>
+</head>
+<body>
+	<h1>Django Simple Blog With Admin</h1>
+	<h2><a href="{% url 'new' %}">Novo Post</a></h2>
+
+	{% for post in posts %}
+		<article>
+			<p><strong>{{post.title}}</strong></p>
+			<p>{{post.text}}</p>
+			<a href="{% url 'update' post.id %}">Atualizar</a>
+			<a href="{% url 'delete' post.id %}">Deletar</a>
+		</article>
+	{% endfor %}
+
+</body>
+</html>
